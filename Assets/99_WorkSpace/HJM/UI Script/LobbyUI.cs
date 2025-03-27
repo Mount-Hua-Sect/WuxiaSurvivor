@@ -32,16 +32,18 @@ public class LobbyUI : BaseUI
 
     private void OnUpgrade()
     {
+        // Upgrade UI 켜기
         uiManager.upgradeUI.ShowUI();
     }
 
     private void OnOption()
     {
+        // Option UI 켜기
         uiManager.optionUI.ShowUI();
     }
 
     public void UpdateLobbyUI()
     {
-        // 1. gold 업데이트
+        // TODO: 보유 Gold 수치 업데이트
     }
 }

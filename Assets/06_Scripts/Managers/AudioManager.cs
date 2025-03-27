@@ -26,16 +26,30 @@ public class AudioManager : Singleton<AudioManager>
 
     // sfx object
 
+    /*
+     * 효과음
+     * HashSet 사용해서 중복 효과음 방지
+     * 플레이어와 일정거리 떨어져있을경우  효과음 X
+     * 
+     * 배경음
+     * 배경음 페이드인 페이드아웃
+     */
     protected override void Initialize()
     {
+        // DontDestroy 설정
         SetDontDestroyOnLoad();
 
+        // volume 불러오기
         LoadVolumes();
 
+        // BGM object 생성
         bgmObject = new GameObject("bgm Object");
         bgmObject.transform.parent = transform;
     }
 
+    /// <summary>
+    /// Volume 불러오기
+    /// </summary>
     private void LoadVolumes()
     {
         volumes = new float[3];
@@ -44,6 +58,9 @@ public class AudioManager : Singleton<AudioManager>
         volumes[(int)VolumeType.Sfx] = PlayerPrefs.GetFloat(sfxVolumeKey, 0.5f);
     }
 
+    /// <summary>
+    /// Volume 저장
+    /// </summary>
     public void SaveVolumes()
     {
         PlayerPrefs.SetFloat(masterVolumeKey, volumes[(int)VolumeType.Master]);
@@ -51,6 +68,11 @@ public class AudioManager : Singleton<AudioManager>
         PlayerPrefs.SetFloat(sfxVolumeKey, volumes[(int)VolumeType.Sfx]);
     }
 
+    /// <summary>
+    /// Volume 값 수정 메서드
+    /// </summary>
+    /// <param name="type">변경할 Volume Type</param>
+    /// <param name="value">값</param>
     public void SetVolume(VolumeType type, float value)
     {
         volumes[(int)type] = value;
