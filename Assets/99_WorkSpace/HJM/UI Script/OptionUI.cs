@@ -14,29 +14,39 @@ public class OptionUI : BaseUI
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider bgmVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
+
     public override void InitUI(UIManager uiManager)
     {
         base.InitUI(uiManager);
         audioManager = AudioManager.Instance;
-        backButton.onClick.AddListener(CloseOption);
+        backButton.onClick.AddListener(HideUI);
+
+        masterVolumeSlider.onValueChanged.AddListener(
+             value => audioManager.SetVolume(VolumeType.Master, value));
+        bgmVolumeSlider.onValueChanged.AddListener(
+            value => audioManager.SetVolume(VolumeType.Bgm, value));
+        sfxVolumeSlider.onValueChanged.AddListener(
+            value => audioManager.SetVolume(VolumeType.Sfx, value));
     }
 
-    public override void ActiveUI(bool state)
+    public override void ShowUI()
     {
-        base.ActiveUI(state);
+        base.ShowUI();
 
-        masterVolumeSlider.value = audioManager.masterVolume;
-        bgmVolumeSlider.value = audioManager.bgmVolume;
-        sfxVolumeSlider.value = audioManager.sfxVolume;
+        float[] volumes = audioManager.volumes;
+        masterVolumeSlider.value = volumes[(int)VolumeType.Master];
+        bgmVolumeSlider.value = volumes[(int)VolumeType.Bgm];
+        sfxVolumeSlider.value = volumes[(int)VolumeType.Sfx];
     }
 
-    private void CloseOption()
+    public override void HideUI()
     {
+        base.HideUI();
+
+        // Lobby UI 업데이트
         uiManager.lobbyUI.UpdateLobbyUI();
-        // 옵션값 저장
-        // TODO: 옵션값 저장
 
-        // UI OFF
-        ActiveUI(false);
+        // 볼륨값 저장
+        audioManager.SaveVolumes();
     }
 }

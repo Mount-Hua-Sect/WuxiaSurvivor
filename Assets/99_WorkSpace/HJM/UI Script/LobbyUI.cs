@@ -18,28 +18,26 @@ public class LobbyUI : BaseUI
     {
         base.InitUI(uiManager);
 
-        startButton.onClick.AddListener(OnStart);
+        startButton.onClick.AddListener(HideUI);
         upgradeButton.onClick.AddListener(OnUpgrade);
         optionButton.onClick.AddListener(OnOption);
     }
 
-    private void OnStart()
+    public override void HideUI()
     {
-        // Lobby UI Off
-        ActiveUI(false);
+        base.HideUI();
 
-        // Main Scene 이동
-        // 대충 씬 이동 코드 어쩌구 저쩌구
+        // TODO: Main 씬 이동 추가하기
     }
 
     private void OnUpgrade()
     {
-        uiManager.upgradeUI.ActiveUI(true);
+        uiManager.upgradeUI.ShowUI();
     }
 
     private void OnOption()
     {
-        uiManager.optionUI.ActiveUI(true);
+        uiManager.optionUI.ShowUI();
     }
 
     public void UpdateLobbyUI()

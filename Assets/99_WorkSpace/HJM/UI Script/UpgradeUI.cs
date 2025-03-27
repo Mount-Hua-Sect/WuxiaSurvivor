@@ -12,13 +12,14 @@ public class UpgradeUI : BaseUI
     {
         base.InitUI(uiManager);
 
-        backButton.onClick.AddListener(CloseUpgrade);
+        backButton.onClick.AddListener(HideUI);
     }
 
-    private void CloseUpgrade()
+    public override void HideUI()
     {
+        base.HideUI();
+
+        // Lobby UI 업데이트
         uiManager.lobbyUI.UpdateLobbyUI();
-        // UI OFF
-        ActiveUI(false);
     }
 }

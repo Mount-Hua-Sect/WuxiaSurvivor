@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    public LobbyUI lobbyUI;
-    public UpgradeUI upgradeUI;
-    public OptionUI optionUI;
+    public LobbyUI lobbyUI { get; private set; }
+    public UpgradeUI upgradeUI { get; private set; }
+    public OptionUI optionUI { get; private set; }
 
     protected override void Initialize()
     {
