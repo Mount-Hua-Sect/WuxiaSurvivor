@@ -410,9 +410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd92aa55b7e192479951db1f51e5880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobbyUI: {fileID: 0}
-  upgradeUI: {fileID: 0}
-  optionUI: {fileID: 0}
 --- !u!224 &1403168502 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6421020315761962548, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
@@ -506,41 +503,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4252203281476094197, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 4252203281476094197, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6333737419273933992, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6432026850520603117, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
       propertyPath: m_Name
       value: Option UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6432026850520603117, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7656414399988342995, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 7656414399988342995, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7865347501768399733, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.478
-      objectReference: {fileID: 0}
-    - target: {fileID: 7865347501768399733, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -555,17 +520,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1324180854}
     m_Modifications:
-    - target: {fileID: 1215570426114678603, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
-      propertyPath: m_Name
-      value: Gold Text
-      objectReference: {fileID: 0}
     - target: {fileID: 4941446753799977718, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
       propertyPath: m_Name
       value: Lobby UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4941446753799977718, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8159647120607400639, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
       propertyPath: m_Pivot.x
@@ -663,18 +620,6 @@ PrefabInstance:
     - target: {fileID: 155912803034659696, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
       propertyPath: m_Name
       value: Upgrade UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549218249779639407, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549218249779639407, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549218249779639407, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6421020315761962548, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
       propertyPath: m_Pivot.x

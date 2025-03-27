@@ -44,6 +44,7 @@ public class LobbyUI : BaseUI
 
     public void UpdateLobbyUI()
     {
-        // TODO: 보유 Gold 수치 업데이트
+        // TODO: 보유중인 Gold 수치 업데이트
+        goldText.text = "10000";
     }
 }

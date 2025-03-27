@@ -10,7 +10,7 @@ public class OptionUI : BaseUI
     [Header("Button")]
     [SerializeField] private Button backButton;
 
-    [Header("Sound")]
+    [Header("Slider")]
     [SerializeField] private Slider masterVolumeSlider;
     [SerializeField] private Slider bgmVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
