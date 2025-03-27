@@ -25,7 +25,11 @@ public class LobbyUI : BaseUI
 
     private void OnStart()
     {
+        // Lobby UI Off
+        ActiveUI(false);
+
         // Main Scene 이동
+        // 대충 씬 이동 코드 어쩌구 저쩌구
     }
 
     private void OnUpgrade()
@@ -36,5 +40,10 @@ public class LobbyUI : BaseUI
     private void OnOption()
     {
         uiManager.optionUI.ActiveUI(true);
+    }
+
+    public void UpdateLobbyUI()
+    {
+        // 1. gold 업데이트
     }
 }
