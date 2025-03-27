@@ -21,10 +21,11 @@ public class AudioManager : Singleton<AudioManager>
     // volumes
     public float[] volumes { get; private set; }
 
-    // bgm object
-    private GameObject bgmObject;
+    // bgm 
+    public BGMController bgmController { get; private set; }
 
     // sfx object
+    public SFXController sfxController { get; private set; }
 
     /*
      * 효과음
@@ -42,9 +43,13 @@ public class AudioManager : Singleton<AudioManager>
         // volume 불러오기
         LoadVolumes();
 
-        // BGM object 생성
-        bgmObject = new GameObject("bgm Object");
-        bgmObject.transform.parent = transform;
+        // BGM / SFX Controller 추가
+        bgmController = gameObject.AddComponent<BGMController>();
+        sfxController = gameObject.AddComponent<SFXController>();
+
+        // Controller 초기화
+        bgmController.InitController(this);
+        sfxController.InitController(this);
     }
 
     /// <summary>
