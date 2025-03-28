@@ -18,6 +18,7 @@ public class InGameUI : BaseUI
         // 초기화
         expbar.InitExpBar();
         gameTimer.InitTimer();
+        skillInventory.InitSkillInventory();
 
         // 버튼 버튼
         pauseButton.onClick.AddListener(OnPause);
