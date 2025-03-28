@@ -1,9 +1,13 @@
 public class PlayerStateMachine : StateMachine
 {
-    public PlayerController Player { get; private set; }
+    public PlayerController Controller { get; private set; }
 
-    public PlayerStateMachine(PlayerController player)
+    public PlayerIdleState Idle { get; private set; }
+
+    public PlayerStateMachine(PlayerController controller)
     {
-        Player = player;
+        Controller = controller;
+
+        Idle = new(this);
     }
 }
