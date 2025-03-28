@@ -24,7 +24,7 @@ public class PlayerBuilder : MonoBehaviour
     public Texture2D Texture { get; private set; }
     private Dictionary<string, Sprite> _sprites;
 
-    private void Awake()
+    private void Start()
     {
         Rebuild();
     }
@@ -120,7 +120,7 @@ public class PlayerBuilder : MonoBehaviour
             spriteLibraryAsset.AddCategoryLabel(sprite.Value, split[0], split[1]);
         }
 
-        GetComponent<PlayerController>().Body.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>().spriteLibraryAsset = spriteLibraryAsset;
+        GameManager.Instance.Player.Body.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>().spriteLibraryAsset = spriteLibraryAsset;
     }
 
     private void CapeOverlay(Color32[] cape)
