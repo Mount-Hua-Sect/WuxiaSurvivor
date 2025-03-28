@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager>
     public UpgradeUI upgradeUI { get; private set; }
     public OptionUI optionUI { get; private set; }
     public InGameUI inGameUI { get; private set; }
+    public PauseUI pauseUI { get; private set; }
 
     protected override void Initialize()
     {
@@ -21,6 +22,7 @@ public class UIManager : Singleton<UIManager>
         upgradeUI = FindObjectOfType<UpgradeUI>(true);
         optionUI = FindObjectOfType<OptionUI>(true);
         inGameUI = FindObjectOfType<InGameUI>(true);
+        pauseUI = FindObjectOfType<PauseUI>(true);
 
         InitUIs();
     }
@@ -32,5 +34,6 @@ public class UIManager : Singleton<UIManager>
         upgradeUI.InitUI(this);
         optionUI.InitUI(this);
         inGameUI.InitUI(this);
+        pauseUI.InitUI(this);
     }
 }
