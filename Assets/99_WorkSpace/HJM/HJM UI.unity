@@ -503,37 +503,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4252203281476094197, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4252203281476094197, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6432026850520603117, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
       propertyPath: m_Name
       value: Option UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6432026850520603117, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7656414399988342995, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7656414399988342995, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7865347501768399733, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7865347501768399733, guid: cccce515f25094e4cbbfb471b9b716e8, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -578,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4375656182734402519, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4375656182734402519, guid: e7fedd8ea6e80084ba4b42d48f3e5654, type: 3}
       propertyPath: m_AnchorMin.x
@@ -894,10 +866,6 @@ PrefabInstance:
     - target: {fileID: 155912803034659696, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
       propertyPath: m_Name
       value: Upgrade UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 155912803034659696, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6421020315761962548, guid: e43572d6371cb3f4295feacd85f6586f, type: 3}
       propertyPath: m_Pivot.x
