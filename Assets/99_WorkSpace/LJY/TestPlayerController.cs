@@ -6,7 +6,7 @@ public class TestPlayerController : MonoBehaviour
 {
     public float Speed;
     private Rigidbody2D rb;
-    public Vector2 MoveVelocity;
+    private Vector2 moveVelocity;
 
     private void Start()
     {
@@ -16,11 +16,11 @@ public class TestPlayerController : MonoBehaviour
     private void Update()
     {
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        MoveVelocity = moveInput.normalized * Speed;
+        moveVelocity = moveInput.normalized * Speed;
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + MoveVelocity * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 }
