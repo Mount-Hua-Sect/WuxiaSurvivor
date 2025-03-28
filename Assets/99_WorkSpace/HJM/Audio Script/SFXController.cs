@@ -31,6 +31,12 @@ public class SFXController : MonoBehaviour
 
         playingClips = new HashSet<AudioClip>();
     }
+
+    /// <summary>
+    /// 효과음 실행
+    /// </summary>
+    /// <param name="clipName">sfx clip enum</param>
+    /// <param name="sfxPosition">실행 위치</param>
     public void PlayClip(SfxName clipName, Vector2 sfxPosition)
     {
         AudioClip clip = clips[(int)clipName];
@@ -49,12 +55,13 @@ public class SFXController : MonoBehaviour
             return;
 
         // 이미 재생중인 클립 ( 중복 방지
+        // TODO: 재생중인 클립일때 재생된지 n초가 지났다면 멈추고 다시 실행시키기
         if (playingClips.Contains(clip))
             return;
         
         // 클립 재생
         playingClips.Add(clip);
-        audioSource.PlayOneShot(clip, audioManager.volumes[(int)VolumeType.Sfx]);
+        audioSource.PlayOneShot(clip, audioManager.GetVolume(VolumeType.Sfx));
 
         // 클립 종료 코루틴
         StartCoroutine(EndPlayingStatus(clip));

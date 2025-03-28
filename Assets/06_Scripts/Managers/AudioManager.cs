@@ -27,6 +27,7 @@ public class AudioManager : Singleton<AudioManager>
     // sfx
     public SFXController sfxController { get; private set; }
 
+    public event Action onVolumeChanged;
     protected override void Initialize()
     {
         // DontDestroy 설정
@@ -40,17 +41,21 @@ public class AudioManager : Singleton<AudioManager>
         sfxController = FindObjectOfType<SFXController>();
 
         // Controller 초기화
-        bgmController.InitController(this);
-        sfxController.InitController(this);
+        bgmController?.InitController(this);
+        sfxController?.InitController(this);
+
+        onVolumeChanged +=
+            () => bgmController.ChangeVolume(GetVolume(VolumeType.Bgm));
     }
 
+    #region 볼륨 조절
     /// <summary>
     /// Volume 불러오기
     /// </summary>
     private void LoadVolumes()
     {
         volumes = new float[3];
-        volumes[(int)VolumeType.Master] = PlayerPrefs.GetFloat(masterVolumeKey, 0.5f);
+        volumes[(int)VolumeType.Master] = PlayerPrefs.GetFloat(masterVolumeKey, 1f);
         volumes[(int)VolumeType.Bgm] = PlayerPrefs.GetFloat(bgmVolumeKey, 0.5f);
         volumes[(int)VolumeType.Sfx] = PlayerPrefs.GetFloat(sfxVolumeKey, 0.5f);
     }
@@ -66,12 +71,28 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     /// <summary>
-    /// Volume 값 수정 메서드
+    /// Volume 값 수정
     /// </summary>
     /// <param name="type">변경할 Volume Type</param>
     /// <param name="value">값</param>
     public void SetVolume(VolumeType type, float value)
     {
         volumes[(int)type] = value;
+        onVolumeChanged();
     }
+
+    /// <summary>
+    /// Master volume을 포함시킨 Volume값 가져오기
+    /// </summary>
+    /// <param name="type">가지고올 volume Type</param>
+    /// <returns>volume 값</returns>
+    public float GetVolume(VolumeType type)
+    {
+        float volume = volumes[(int)VolumeType.Master];
+        if(type != VolumeType.Master)
+            volume *= volumes[(int)type];
+
+        return volume;
+    }
+    #endregion
 }
