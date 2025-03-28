@@ -17,6 +17,8 @@ public class UIManager : Singleton<UIManager>
         // DontDestroy 설정
         SetDontDestroyOnLoad();
 
+        ResourceManager.Instance.Instantiate(Define.CANVAS_KEY, this.transform, Vector2.zero, Vector2.zero);
+
         // 캐싱
         lobbyUI = FindObjectOfType<LobbyUI>(true);
         upgradeUI = FindObjectOfType<UpgradeUI>(true);
