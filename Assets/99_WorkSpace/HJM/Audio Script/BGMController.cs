@@ -23,7 +23,13 @@ public class BGMController : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
+        InitBGM();
+    }
+
+    private void InitBGM()
+    {
         audioSource.clip = clips[(int)BgmName.LobbyBGM];
+        audioSource.volume = audioManager.GetVolume(VolumeType.Bgm);
         audioSource.Play();
     }
 

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class LobbyUI : BaseUI
 {
     [Header("Lobby Data")]
-    [SerializeField] private TextMeshProUGUI goldText;
+    [SerializeField] private TextMeshProUGUI uiTitle;
 
     [Header("Button")]
     [SerializeField] private Button startButton;
@@ -22,6 +22,8 @@ public class LobbyUI : BaseUI
         startButton.onClick.AddListener(HideUI);
         upgradeButton.onClick.AddListener(OnUpgrade);
         optionButton.onClick.AddListener(OnOption);
+
+        UpdateLobbyUI("로비");
     }
 
     public override void HideUI()
@@ -36,17 +38,18 @@ public class LobbyUI : BaseUI
     {
         // Upgrade UI 켜기
         uiManager.upgradeUI.ShowUI();
+        UpdateLobbyUI("강화");
     }
 
     private void OnOption()
     {
         // Option UI 켜기
         uiManager.optionUI.ShowUI();
+        UpdateLobbyUI("설정");
     }
 
-    public void UpdateLobbyUI()
+    public void UpdateLobbyUI(string title)
     {
-        // TODO: 보유중인 Gold 수치 업데이트
-        goldText.text = "10000";
+        uiTitle.text = title;
     }
 }
