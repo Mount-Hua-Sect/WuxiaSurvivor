@@ -11,6 +11,8 @@ public class BGMController : MonoBehaviour
     public void InitController(AudioManager audioManager)
     {
         this.audioManager = audioManager;
-        audioSource = gameObject.AddComponent<AudioSource>();
+        transform.parent = audioManager.transform;
+
+        audioSource = GetComponent<AudioSource>();
     }
 }

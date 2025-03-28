@@ -36,8 +36,8 @@ public class AudioManager : Singleton<AudioManager>
         LoadVolumes();
 
         // BGM / SFX Controller 추가
-        bgmController = gameObject.AddComponent<BGMController>();
-        sfxController = gameObject.AddComponent<SFXController>();
+        bgmController = FindObjectOfType<BGMController>();
+        sfxController = FindObjectOfType<SFXController>();
 
         // Controller 초기화
         bgmController.InitController(this);

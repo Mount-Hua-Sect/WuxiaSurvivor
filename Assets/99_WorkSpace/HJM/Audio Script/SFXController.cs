@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+public enum SfxName
+{
+    TEST1,
+    TEST2
+}
+
 public class SFXController : MonoBehaviour
 {
     // 효과음 범위
@@ -18,17 +24,17 @@ public class SFXController : MonoBehaviour
     public void InitController(AudioManager audioManager)
     {
         this.audioManager = audioManager;
-        audioSource = gameObject.AddComponent<AudioSource>();
+        transform.parent = audioManager.transform;
+
+        audioSource = GetComponent<AudioSource>();
         audioListener = FindObjectOfType<AudioListener>();
 
         playingClips = new HashSet<AudioClip>();
-        foreach (AudioClip clip in clips)
-        {
-            playingClips.Add(clip);
-        }
     }
-    public void PlayClip(AudioClip clip, Vector2 sfxPosition)
+    public void PlayClip(SfxName clipName, Vector2 sfxPosition)
     {
+        AudioClip clip = clips[(int)clipName];
+
         // null 예외처리
         if (clip == null) 
             return;
@@ -42,13 +48,15 @@ public class SFXController : MonoBehaviour
         if (distance >= hearingRange) 
             return;
 
-        // 이미 재생중인 클립
+        // 이미 재생중인 클립 ( 중복 방지
         if (playingClips.Contains(clip))
             return;
-
+        
+        // 클립 재생
         playingClips.Add(clip);
         audioSource.PlayOneShot(clip, audioManager.volumes[(int)VolumeType.Sfx]);
 
+        // 클립 종료 코루틴
         StartCoroutine(EndPlayingStatus(clip));
     }
 
