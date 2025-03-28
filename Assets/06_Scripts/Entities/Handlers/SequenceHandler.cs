@@ -22,7 +22,7 @@ public class SequenceHandler
         Death.Kill();
     }
 
-    public void Bind(State type, params Func<Sequence>[] sequences)
+    public void Bind(BaseState type, params Func<Sequence>[] sequences)
     {
         Sequence sequence = sequences[0]();
         for (int i = 1; i < sequences.Length; i++)
@@ -32,16 +32,16 @@ public class SequenceHandler
 
         switch (type)
         {
-            case State.Destroyed:
+            case BaseState.Destroyed:
                 Debug.LogWarning($"Failed to BindSequences({type})");
                 break;
-            case State.Birth:
+            case BaseState.Birth:
                 Birth.Append(sequence);
                 break;
-            case State.Stand:
+            case BaseState.Stand:
                 Stand.Append(sequence);
                 break;
-            case State.Death:
+            case BaseState.Death:
                 Death.Append(sequence);
                 break;
         }
