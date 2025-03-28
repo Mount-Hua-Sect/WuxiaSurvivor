@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,7 +12,6 @@ public class LobbyUI : BaseUI
     [SerializeField] private Button startButton;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button optionButton;
-
     public override void InitUI(UIManager uiManager)
     {
         base.InitUI(uiManager);
@@ -30,7 +27,7 @@ public class LobbyUI : BaseUI
     {
         base.HideUI();
 
-        // TODO: Main 씬 이동 추가하기
+        uiManager.inGameUI.ShowUI();
         SceneManager.LoadScene("01_Main");
     }
 
