@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: f94d7f1910978a94cb04ace216e38dcb
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jawbreaker_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a71d5f9604aab24182895cf21646568
+      internalID: -2093585091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce48cc285823da4db49af9121809bea
+      internalID: -1919154327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069ab2a48c465ba48a897f0adbc7795c
+      internalID: -917940323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cdec98345069e4f91c343ed912c9e5
+      internalID: -877119503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8fd082ceb7aca4eb9a6fcde8e72292
+      internalID: 1048657332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a79a2c922eb794ebf1db0da6c60900
+      internalID: -75537350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbf389d438d0a744ad0c2980c86fdaf
+      internalID: 1488724827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_31
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f5025ed615e104abd72586fa84a348
+      internalID: -896438340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jawbreaker_tiles_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887bf53cee4265d4badd20fcff0da074
+      internalID: 123185886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      jawbreaker_tiles_0: -2093585091
+      jawbreaker_tiles_1: 1064063291
+      jawbreaker_tiles_10: 483613981
+      jawbreaker_tiles_11: 1911702008
+      jawbreaker_tiles_12: -1613831819
+      jawbreaker_tiles_13: 901137931
+      jawbreaker_tiles_14: -2054279013
+      jawbreaker_tiles_15: -877119503
+      jawbreaker_tiles_16: 1048657332
+      jawbreaker_tiles_17: 1416017261
+      jawbreaker_tiles_18: 1796585354
+      jawbreaker_tiles_19: 473569122
+      jawbreaker_tiles_2: -1970706530
+      jawbreaker_tiles_20: -657053331
+      jawbreaker_tiles_21: -1803746555
+      jawbreaker_tiles_22: -757102178
+      jawbreaker_tiles_23: -75537350
+      jawbreaker_tiles_24: 1488724827
+      jawbreaker_tiles_25: 1422348125
+      jawbreaker_tiles_26: 504231408
+      jawbreaker_tiles_27: 1401263907
+      jawbreaker_tiles_28: -1599755436
+      jawbreaker_tiles_29: -2132847501
+      jawbreaker_tiles_3: 1450137397
+      jawbreaker_tiles_30: -1477212984
+      jawbreaker_tiles_31: -896438340
+      jawbreaker_tiles_32: 123185886
+      jawbreaker_tiles_33: -430970253
+      jawbreaker_tiles_34: 201015421
+      jawbreaker_tiles_35: -1235697869
+      jawbreaker_tiles_36: -1817378624
+      jawbreaker_tiles_37: -420228167
+      jawbreaker_tiles_38: -816620902
+      jawbreaker_tiles_39: -128574679
+      jawbreaker_tiles_4: 1273716682
+      jawbreaker_tiles_40: 14223494
+      jawbreaker_tiles_41: 570881113
+      jawbreaker_tiles_42: -563715721
+      jawbreaker_tiles_43: 2107080407
+      jawbreaker_tiles_44: 2048669091
+      jawbreaker_tiles_45: 1297677710
+      jawbreaker_tiles_46: -1178513130
+      jawbreaker_tiles_47: 1931903598
+      jawbreaker_tiles_48: 706314090
+      jawbreaker_tiles_49: 1698412573
+      jawbreaker_tiles_5: -223526641
+      jawbreaker_tiles_50: -159641653
+      jawbreaker_tiles_51: 1922397119
+      jawbreaker_tiles_52: -463931031
+      jawbreaker_tiles_53: 994472280
+      jawbreaker_tiles_54: -99805050
+      jawbreaker_tiles_55: -966692595
+      jawbreaker_tiles_56: -1476542557
+      jawbreaker_tiles_57: 1393935033
+      jawbreaker_tiles_58: 1945182063
+      jawbreaker_tiles_59: -494320980
+      jawbreaker_tiles_6: -1919154327
+      jawbreaker_tiles_60: 2090051375
+      jawbreaker_tiles_61: 255419522
+      jawbreaker_tiles_62: 680566199
+      jawbreaker_tiles_63: -1057942582
+      jawbreaker_tiles_64: 1389259294
+      jawbreaker_tiles_65: 1052105124
+      jawbreaker_tiles_66: -1590492745
+      jawbreaker_tiles_67: 1582073366
+      jawbreaker_tiles_7: -917940323
+      jawbreaker_tiles_8: -2013664584
+      jawbreaker_tiles_9: -741912566
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
