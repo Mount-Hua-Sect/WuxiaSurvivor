@@ -21,19 +21,13 @@ public class AudioManager : Singleton<AudioManager>
     // volumes
     public float[] volumes { get; private set; }
 
-    // bgm object
-    private GameObject bgmObject;
+    // bgm 
+    public BGMController bgmController { get; private set; }
 
-    // sfx object
+    // sfx
+    public SFXController sfxController { get; private set; }
 
-    /*
-     * 효과음
-     * HashSet 사용해서 중복 효과음 방지
-     * 플레이어와 일정거리 떨어져있을경우  효과음 X
-     * 
-     * 배경음
-     * 배경음 페이드인 페이드아웃
-     */
+    public event Action onVolumeChanged;
     protected override void Initialize()
     {
         // DontDestroy 설정
@@ -42,18 +36,26 @@ public class AudioManager : Singleton<AudioManager>
         // volume 불러오기
         LoadVolumes();
 
-        // BGM object 생성
-        bgmObject = new GameObject("bgm Object");
-        bgmObject.transform.parent = transform;
+        // BGM / SFX Controller 추가
+        bgmController = FindObjectOfType<BGMController>();
+        sfxController = FindObjectOfType<SFXController>();
+
+        // Controller 초기화
+        bgmController?.InitController(this);
+        sfxController?.InitController(this);
+
+        onVolumeChanged +=
+            () => bgmController.ChangeVolume(GetVolume(VolumeType.Bgm));
     }
 
+    #region 볼륨 조절
     /// <summary>
     /// Volume 불러오기
     /// </summary>
     private void LoadVolumes()
     {
         volumes = new float[3];
-        volumes[(int)VolumeType.Master] = PlayerPrefs.GetFloat(masterVolumeKey, 0.5f);
+        volumes[(int)VolumeType.Master] = PlayerPrefs.GetFloat(masterVolumeKey, 1f);
         volumes[(int)VolumeType.Bgm] = PlayerPrefs.GetFloat(bgmVolumeKey, 0.5f);
         volumes[(int)VolumeType.Sfx] = PlayerPrefs.GetFloat(sfxVolumeKey, 0.5f);
     }
@@ -69,12 +71,28 @@ public class AudioManager : Singleton<AudioManager>
     }
 
     /// <summary>
-    /// Volume 값 수정 메서드
+    /// Volume 값 수정
     /// </summary>
     /// <param name="type">변경할 Volume Type</param>
     /// <param name="value">값</param>
     public void SetVolume(VolumeType type, float value)
     {
         volumes[(int)type] = value;
+        onVolumeChanged();
     }
+
+    /// <summary>
+    /// Master volume을 포함시킨 Volume값 가져오기
+    /// </summary>
+    /// <param name="type">가지고올 volume Type</param>
+    /// <returns>volume 값</returns>
+    public float GetVolume(VolumeType type)
+    {
+        float volume = volumes[(int)VolumeType.Master];
+        if(type != VolumeType.Master)
+            volume *= volumes[(int)type];
+
+        return volume;
+    }
+    #endregion
 }
