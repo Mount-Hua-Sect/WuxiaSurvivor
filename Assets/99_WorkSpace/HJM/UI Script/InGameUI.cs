@@ -8,6 +8,7 @@ public class InGameUI : BaseUI
 {
     [SerializeField] private ExpBar expbar;
     [SerializeField] private GameTimer gameTimer;
+    [SerializeField] private SkillInventory skillInventory;
     [SerializeField] private Button pauseButton;
 
     public override void InitUI(UIManager uiManager)
