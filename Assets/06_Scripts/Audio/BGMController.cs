@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public enum BgmName
-{
-    LobbyBGM,
-    GameBGM,
-}
-
 public class BGMController : MonoBehaviour
 {
     private AudioManager audioManager;

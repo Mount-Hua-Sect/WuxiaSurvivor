@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public enum SfxName
-{
-    ButtonClick1,
-    ButtonClick2,
-
-}
-
 public class SFXController : MonoBehaviour
 {
     // 효과음 범위

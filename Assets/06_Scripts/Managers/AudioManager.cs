@@ -4,13 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-public enum VolumeType
-{
-    Master,
-    Bgm,
-    Sfx
-}
-
 public class AudioManager : Singleton<AudioManager>
 {
     // player prefs key
