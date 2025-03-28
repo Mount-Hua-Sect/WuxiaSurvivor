@@ -6,6 +6,7 @@ public abstract class PlayerBaseState : IState
     protected Vector2 moveDirection;
 
     protected readonly PlayerStateMachine stateMachine;
+
     private readonly Rigidbody2D rigidbody;
     private readonly SpriteRenderer body;
     private readonly StatHandler statHandler;
@@ -13,6 +14,7 @@ public abstract class PlayerBaseState : IState
     public PlayerBaseState(PlayerStateMachine stateMachine)
     {
         this.stateMachine = stateMachine;
+
         rigidbody = stateMachine.Controller.Rigidbody;
         body = stateMachine.Controller.Body;
         statHandler = stateMachine.Controller.StatHandler;

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PlayerBuilder : MonoBehaviour
+public class CharacterBuilder : MonoBehaviour
 {
     public SpriteCollection SpriteCollection;
     public string Head = "Human";
@@ -88,7 +88,7 @@ public class PlayerBuilder : MonoBehaviour
         }
 
         Texture = TextureHelper.MergeLayers(Texture, layers.Values.ToArray());
-        Texture.SetPixels(0, Texture.height - 32, 32, 32, new Color[32 * 32]);
+        Texture.SetPixels32(0, Texture.height - 32, 32, 32, new Color32[32 * 32]);
 
         if (Cape != "") CapeOverlay(layers["Cape"]);
 
@@ -120,7 +120,7 @@ public class PlayerBuilder : MonoBehaviour
             spriteLibraryAsset.AddCategoryLabel(sprite.Value, split[0], split[1]);
         }
 
-        GameManager.Instance.Player.Body.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>().spriteLibraryAsset = spriteLibraryAsset;
+        GetComponent<BaseController>().Body.GetComponent<UnityEngine.U2D.Animation.SpriteLibrary>().spriteLibraryAsset = spriteLibraryAsset;
     }
 
     private void CapeOverlay(Color32[] cape)

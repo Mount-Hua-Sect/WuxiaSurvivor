@@ -41,7 +41,7 @@ public class ResourceManager : Singleton<ResourceManager>
 
     public GameObject Instantiate(GameObject original)
     {
-        GameObject gameObject = Instantiate(original);
+        GameObject gameObject = Object.Instantiate(original);
         gameObject.name = original.name;
 
         return gameObject;

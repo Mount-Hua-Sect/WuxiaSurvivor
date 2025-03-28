@@ -1,6 +1,6 @@
-public class PlayerIdleState : PlayerBaseState
+public class EnemyIdleState : EnemyBaseState
 {
-    public PlayerIdleState(PlayerStateMachine stateMachine) : base(stateMachine) { }
+    public EnemyIdleState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
