@@ -5,8 +5,9 @@ using UnityEngine;
 
 public enum SfxName
 {
-    TEST1,
-    TEST2
+    ButtonClick1,
+    ButtonClick2,
+
 }
 
 public class SFXController : MonoBehaviour
