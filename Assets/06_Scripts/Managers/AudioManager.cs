@@ -24,17 +24,9 @@ public class AudioManager : Singleton<AudioManager>
     // bgm 
     public BGMController bgmController { get; private set; }
 
-    // sfx object
+    // sfx
     public SFXController sfxController { get; private set; }
 
-    /*
-     * 효과음
-     * HashSet 사용해서 중복 효과음 방지
-     * 플레이어와 일정거리 떨어져있을경우  효과음 X
-     * 
-     * 배경음
-     * 배경음 페이드인 페이드아웃
-     */
     protected override void Initialize()
     {
         // DontDestroy 설정
