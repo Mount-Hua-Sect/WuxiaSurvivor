@@ -39,13 +39,16 @@ public class PauseUI : BaseUI
 
     private void OnLobby()
     {
+        // TODO: Scene Loader 유틸 추가
+        SceneManager.LoadScene("00_Lobby");
+
         // Pause UI off
         HideUI();
 
         // InGameUI off
         uiManager.inGameUI.HideUI();
 
-        // TODO: Scene Loader 유틸 추가
-        SceneManager.LoadScene("00_Lobby");
+        // Lobby UI On
+        uiManager.lobbyUI.ShowUI();
     }
 }
