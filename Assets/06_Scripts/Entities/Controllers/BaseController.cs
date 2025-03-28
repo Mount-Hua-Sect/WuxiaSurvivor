@@ -2,7 +2,7 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 
-public enum State
+public enum BaseState
 {
     Destroyed,
     Birth,
@@ -12,20 +12,20 @@ public enum State
 
 public abstract class BaseController : MonoBehaviour
 {
-    public bool IsDead { get { return state == State.Death || state == State.Destroyed; } }
+    public bool IsDead { get { return state == BaseState.Death || state == BaseState.Destroyed; } }
 
     public event Action OnBirth;
     public event Action OnStand;
     public event Action OnDeath;
     public event Action OnDestoryed;
 
-    private State state;
+    private BaseState state;
 
     private readonly SequenceHandler sequenceHandler = new();
 
     private void Awake() => Initialize();
     private void OnDestroy() => Deinitialize();
-    protected void BindSequences(State type, params Func<Sequence>[] sequences) => sequenceHandler.Bind(type, sequences);
+    protected void BindSequences(BaseState type, params Func<Sequence>[] sequences) => sequenceHandler.Bind(type, sequences);
 
     protected virtual void Initialize()
     {
@@ -47,7 +47,7 @@ public abstract class BaseController : MonoBehaviour
 
     public virtual void Birth()
     {
-        state = State.Birth;
+        state = BaseState.Birth;
 
         sequenceHandler.Birth.Restart();
 
@@ -56,7 +56,7 @@ public abstract class BaseController : MonoBehaviour
 
     public virtual void Stand()
     {
-        state = State.Stand;
+        state = BaseState.Stand;
 
         sequenceHandler.Stand.Restart();
 
@@ -65,7 +65,7 @@ public abstract class BaseController : MonoBehaviour
 
     public virtual void Death()
     {
-        state = State.Death;
+        state = BaseState.Death;
 
         sequenceHandler.Stand.Pause();
         sequenceHandler.Death.Restart();
@@ -75,7 +75,7 @@ public abstract class BaseController : MonoBehaviour
 
     public virtual void Destroy()
     {
-        state = State.Destroyed;
+        state = BaseState.Destroyed;
 
         sequenceHandler.Stand.Pause();
 
