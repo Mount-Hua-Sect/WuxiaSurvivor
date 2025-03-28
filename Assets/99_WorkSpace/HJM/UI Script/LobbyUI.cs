@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LobbyUI : BaseUI
@@ -28,6 +29,7 @@ public class LobbyUI : BaseUI
         base.HideUI();
 
         // TODO: Main 씬 이동 추가하기
+        SceneManager.LoadScene("01_Main");
     }
 
     private void OnUpgrade()
