@@ -20,7 +20,13 @@ public class LobbyUI : BaseUI
         upgradeButton.onClick.AddListener(OnUpgrade);
         optionButton.onClick.AddListener(OnOption);
 
-        UpdateLobbyUI("로비");
+        ShowUI();
+    }
+
+    public override void ShowUI()
+    {
+        base.ShowUI();
+        UpdateLobbyTitle("로비");
     }
 
     public override void HideUI()
@@ -33,19 +39,19 @@ public class LobbyUI : BaseUI
 
     private void OnUpgrade()
     {
-        // Upgrade UI 켜기
+        // Upgrade UI ON
         uiManager.upgradeUI.ShowUI();
-        UpdateLobbyUI("강화");
+        UpdateLobbyTitle("강화");
     }
 
     private void OnOption()
     {
-        // Option UI 켜기
+        // Option UI ON
         uiManager.optionUI.ShowUI();
-        UpdateLobbyUI("설정");
+        UpdateLobbyTitle("설정");
     }
 
-    public void UpdateLobbyUI(string title)
+    public void UpdateLobbyTitle(string title)
     {
         uiTitle.text = title;
     }
